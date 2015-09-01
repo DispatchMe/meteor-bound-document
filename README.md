@@ -90,9 +90,9 @@ doc = c.findOne('1');
 console.log(doc.one.two.three); // still bar
 ```
 
-## Binding Yourself
+## Binding A Document
 
-In client or server code:
+You don't have to rely `findOne`, `fetch`, etc. to bind a document for you. You can bind a document at any time after retrieving it, in client or server code:
 
 ```js
 var boundDoc = new BoundDocument(AnyCollectionWithASchemaAttached, normalDoc);
