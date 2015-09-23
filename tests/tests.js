@@ -59,6 +59,11 @@ describe('BoundDocument', function () {
       expect(doc instanceof BoundDocument).toEqual(true);
     });
 
+    it('returns undefined when there is no document with bind option', function () {
+      var doc = c.findOne('2', {bind: true});
+      expect(doc).toBeUndefined();
+    });
+
   });
 
   describe('cursor.fetch', function () {
